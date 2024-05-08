@@ -46,3 +46,25 @@ Cypress.Commands.add('createNote', (note, attachFile = false) => {
 
   cy.contains('.list-group-item', note).should('be.visible')
 })
+
+Cypress.Commands.add('editNote', (note, newNoteValue, attachFile = false) => {
+  cy.intercept('GET', '**/notes/**').as('getNote')
+
+  cy.contains('.list-group-item', note).click()
+  cy.wait('@getNote')
+
+  cy.get('#content')
+    .as('contentField')
+    .clear()
+  cy.get('@contentField')
+    .type(newNoteValue)
+
+  if (attachFile) {
+    attachFileHandler()
+  }
+
+  cy.contains('button', 'Save').click()
+
+  cy.contains('.list-group-item', newNoteValue).should('be.visible')
+  cy.contains('.list-group-item', note).should('not.exist')
+})
