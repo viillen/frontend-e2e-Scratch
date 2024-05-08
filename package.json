@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.15.0"
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.15.0",
+    "cypress-mailosaur": "^2.13.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-cypress": "^2.13.3"
   }
 }
