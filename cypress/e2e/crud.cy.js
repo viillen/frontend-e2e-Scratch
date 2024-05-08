@@ -15,5 +15,8 @@ describe('CRUD', () => {
 
     cy.editNote(noteDescription, updatedNoteDescription, attachFile)
     cy.wait('@getNotes')
+    
+    cy.deleteNote(updatedNoteDescription)
+    cy.wait('@getNotes')
   })
 })

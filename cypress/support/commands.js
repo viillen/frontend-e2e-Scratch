@@ -68,3 +68,14 @@ Cypress.Commands.add('editNote', (note, newNoteValue, attachFile = false) => {
   cy.contains('.list-group-item', newNoteValue).should('be.visible')
   cy.contains('.list-group-item', note).should('not.exist')
 })
+
+Cypress.Commands.add('deleteNote', note => {
+  cy.contains('.list-group-item', note).click()
+  cy.contains('button', 'Delete').click()
+
+  cy.get('.list-group-item')
+    .its('length')
+    .should('be.at.least', 1)
+  cy.contains('.list-group-item', note)
+    .should('not.exist')
+})
