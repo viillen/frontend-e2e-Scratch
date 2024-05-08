@@ -9,5 +9,11 @@ describe('CRUD', () => {
 
     cy.createNote(noteDescription)
     cy.wait('@getNotes')
+    
+    const updatedNoteDescription = faker.lorem.words(4)
+    const attachFile = true
+
+    cy.editNote(noteDescription, updatedNoteDescription, attachFile)
+    cy.wait('@getNotes')
   })
 })
