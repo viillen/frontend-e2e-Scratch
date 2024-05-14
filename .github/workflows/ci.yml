@@ -18,7 +18,7 @@ jobs:
   cypress-tests-desktop:
     needs: eslint
     runs-on: ubuntu-22.04
-     steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run end-to-end tests on desktop viewport 🧪
@@ -43,5 +43,3 @@ jobs:
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
         with:
           command: npm run test:tablet
- 
-  
