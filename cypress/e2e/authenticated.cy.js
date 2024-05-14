@@ -50,4 +50,4 @@ describe('CRUD', () => {
 
     cy.get('#email').should('be.visible')
   })
-})
+}) 
