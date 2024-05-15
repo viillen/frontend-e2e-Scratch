@@ -7,9 +7,10 @@ module.exports = defineConfig({
       viewportWidthBreakpoint: 768,
     },
     requestTimeout: 20000,
+    'defaultCommandTimeout': 40000,
     chromeWebSecurity: false,
   },
 
-  projectId: '6wmdtb',
+  projectId: '6wmdtb'
 })
   
