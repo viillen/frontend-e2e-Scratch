@@ -8,9 +8,8 @@ module.exports = defineConfig({
     },
     requestTimeout: 20000,
     chromeWebSecurity: false,
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
   },
+
+  projectId: '6wmdtb',
 })
   
