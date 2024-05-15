@@ -33,7 +33,7 @@ describe('CRUD', () => {
       .should('be.equal', 'Complete')
   })
 
-  it('logs out', () => {
+  it('logs out',  { tags: '@desktop-and-tablet' }, () => {
     cy.intercept('GET', '**/notes').as('getNotes')
     cy.sessionLogin()
     cy.visit('/')
