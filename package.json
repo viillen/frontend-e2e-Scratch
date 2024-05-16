@@ -1,7 +1,7 @@
 {
   "name": "frontend-e2e-scratch",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample project to demonstrate end-to-end (e2e) tests written with [Cypress](https://cypress.io) running on GitHub Actions.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint cypress/**/*.js && eslint cypress.config.js",

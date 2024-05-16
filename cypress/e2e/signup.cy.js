@@ -1,3 +1,4 @@
+/// <reference path="../support/commands.d.ts" />
 import 'cypress-mailosaur'
 import { faker } from '@faker-js/faker/locale/en'
 
